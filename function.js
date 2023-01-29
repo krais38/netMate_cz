@@ -41,14 +41,21 @@ function openIconModal() {
     selectedSlot.setAttribute("data-icon", storedDataIcon);
   }
 
+  //podmínka - prázdná data-icon?
   if (selectedSlot.getAttribute("data-icon")) {
+    //podmínka - existuje už button na odstranění?
     if (iconGrid.querySelector(".slot_remove")) {
       return;
     }
+    //vytvoř nový div
     let newDiv = document.createElement("div");
+    //pojmenuj ho class:
     newDiv.classList.add("slot_remove");
+    //ikona odstranit uvnitř
     newDiv.innerHTML = `<img src="https://img.icons8.com/ios/512/minus.png" class="icon__close">`;
+    //přidej do html
     iconGrid.prepend(newDiv);
+    //funkce na klik - nastav default obrázek, odstraň data-icon ze slotu, odstraň samotný button, uprav localstorage, zavři modal
     newDiv.addEventListener("click", function () {
       selectedSlot.querySelector("img").src = defaultSrc;
       selectedSlot.removeAttribute("data-icon");
