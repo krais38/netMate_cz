@@ -1,0 +1,118 @@
+
+body {
+  background: #FFF9FB;
+}
+
+.icon__slot {
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+  }
+  .slot-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    display: grid;
+    gap: 2vw;
+    width: 100%;
+  }
+
+.hidden {
+  display: none;
+}
+
+.slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon__close{
+  width: 36px;
+  height: 36px;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.icon__close:hover {
+  filter: invert(14%) sepia(81%) saturate(5922%) hue-rotate(352deg) brightness(98%) contrast(87%);
+  transition: .3s;
+}
+
+.icon-modal {
+  width: 48px;
+  height: 48px;
+}
+.element__wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+#icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+  gap: 1rem;
+
+}
+
+#icon-modal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFF9FB;
+  padding: 3rem;
+  margin-top: 3em;
+  border-radius: 3rem;
+  width: 60vw;
+  min-width: 400px;
+  height: 60vh;
+  height: 60dvh;
+  min-height: 480px;
+  overflow: scroll;
+  -webkit-box-shadow: 17px 18px 38px 11px rgba(207,207,227,0.46);
+-moz-box-shadow: 17px 18px 38px 11px rgba(207,207,227,0.46);
+box-shadow: 17px 18px 38px 11px rgba(207,207,227,0.46);
+}
+
+.icon-search {
+  margin: 2rem 0;
+}
+input {
+  padding: .5rem;
+  border-radius: .5rem;
+  border: 1px solid lightgray;
+}
+
+button {
+  margin: 0 10px;
+  background: transparent;
+  border: 1px solid lightgrey;
+  border-radius: .5rem;
+  padding: .5rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button:hover {
+  border-color: #4B88A2;
+  transition: .3s;
+
+}
+
+.btn-active {
+  border-color: #4B88A2;
+}
+
+button::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  padding-right: 32px;
+}
+.allBtn::after {
+  background: transparent url(https://img.icons8.com/ios/512/infinity.png) no-repeat center;
+  background-size: contain;
+}
+.energyBtn::after {
+  background: transparent url(https://img.icons8.com/windows/512/electricity.png) no-repeat center;
+  background-size: contain;
+}
